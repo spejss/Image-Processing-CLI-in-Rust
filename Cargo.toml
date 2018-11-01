@@ -4,7 +4,5 @@ version = "0.1.0"
 authors = ["Mikołaj Wawrzyniak <mikolajspejs@gmail.com>"]
 
 [dependencies]
-clap = "*"
+clap = "2"
 image = "0.15.0"
-
-

@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-* binary treshold
+* binary threshold
 * histogram for rgb
 * histogram for grayscale
 
@@ -17,4 +17,3 @@ All notable changes to this project will be documented in this file.
 * huerotate
 * invert
 * thumbnail
-
