@@ -50,3 +50,8 @@ ipcli/target/debug/*
 *.cargo-lock
 ipcli/target/debug/.*
 ipcli/target/x*
+
+*Cargo.lock
+*.iml
+/target
+.idea/
