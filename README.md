@@ -30,6 +30,7 @@ Generated histograms are also stored this way.
 * ***contrast:*** -o contrast -v 20.0
 * ***grayscale***: -o grayscale 
 * ***invert*** -o invert
+* ***Canny Edge Detection*** -o canny -v 0.5 50 100
 
 ## Examples 
 

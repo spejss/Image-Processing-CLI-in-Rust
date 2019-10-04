@@ -1,6 +1,8 @@
 extern crate clap;
 extern crate image;
 
+mod canny;
+
 use clap::{Arg,App,SubCommand};
 use std::fs::File;
 use image::{FilterType, GenericImage, Pixel,ImageBuffer,Rgb};
@@ -73,6 +75,15 @@ fn main() {
             let v: u8 = value.parse().unwrap();
             binary_treshold(imagePath,v);
             }
+        "canny" => {
+            // Perform input checking
+            let values: Vec<&str> = value.split_whitespace().collect();
+            if let (Ok(sigma), Ok(min_val), Ok(max_val)) = (values[0].parse::<f32>(), values[1].parse::<f64>(), values[2].parse::<f64>()) {
+                canny::edge_detect(imagePath, sigma, min_val, max_val);
+            } else {
+                println!("Canny Edge Detection Requires 3 Parameters: sigma min_val max_val")
+            }
+        }
         _ => {println!("Not implemented yet!")}
     }
 }
